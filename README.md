@@ -1,2 +1,2 @@
 # Webdevelopment
-This Reporistory is collection of my practice over webdevelopment(Frontend).
+This Reporistory is the collection of projects which are my practice works over webdevelopment(Frontend).
