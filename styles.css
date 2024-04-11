@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    background-color: lightgrey;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Ubuntu';
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    color: white;
+    background-color: black;
+}
+
+nav ul li {
+    padding: 0px 12px;
+}
+
+.brand img {
+    width: 110px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container {
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 35px;
+    background-image: url('ARC.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+.songList {
+    background-color: black;
+}
+
+.songsBanner{
+    width: 20%;
+    height: 100%;
+    /* border: 2px solid white; */
+    position: relative;
+    margin:100px;
+    box-shadow: 0 0 10px whitesmoke;
+}
+
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+.bottom {
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 14px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top: 74px;
+    width: auto;
+}
+
+.songItem {
+    height: 60px;
+    display: flex;
+    background-color: rgba(240, 240, 245, 0.5);
+    width: 80%;
+    margin: 12px;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+    border-radius: 34px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: transform 0.5s ease-in-out; /* Add transition for rotation */
+}
+
+.songItem img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'Verela Round';
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.songItem.playing {
+    background-color: rgb(236, 237, 239); /* Change the background color of the playing song item */
+}
+
+.songItem.playing img {
+    animation: rotateSongImage 2s infinite linear; /* Continuous rotation animation */
+}
+
+@keyframes rotateSongImage {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
